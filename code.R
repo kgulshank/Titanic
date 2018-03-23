@@ -49,6 +49,7 @@ titanic.train<-titanic.full[titanic.full$Istrainset==TRUE,]
 titanic.test<-titanic.full[titanic.full$Istrainset==FALSE,]
 
 titanic.train$Survived<-as.factor(titanic.train$Survived)
+#modeling using randomForest
 library(randomForest)
 survived.equation="Survived ~ Fare + Pclass + Sex  + Age + SibSp + Parch + Embarked "
 survived.formula<-as.formula(survived.equation)
